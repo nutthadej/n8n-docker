@@ -12,3 +12,4 @@ EXPOSE 10000
 
 CMD ["n8n", "start"]
 
+
