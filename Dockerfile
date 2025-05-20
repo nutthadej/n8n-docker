@@ -1,4 +1,4 @@
-FROM n8nio/n8n
+FROM n8nio/n8n:latest
 
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
@@ -10,7 +10,9 @@ ENV PORT=5678
 
 EXPOSE 5678
 
-CMD ["n8n", "start"]
+# ใช้ ENTRYPOINT แยกคำสั่งออก เพื่อให้ทำงานบน Render ได้
+ENTRYPOINT ["tini", "--"]
+CMD ["n8n"]
 
 
 
