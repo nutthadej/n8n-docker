@@ -15,7 +15,7 @@ services:
       - DB_POSTGRESDB_PASSWORD=n8npass
       - TZ=Asia/Bangkok
       - GENERIC_TIMEZONE=Asia/Bangkok
-      - WEBHOOK_URL=https://your-n8n-service.onrender.com
+      - WEBHOOK_URL=https://n8n-docker-918d.onrender.com
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=your_secure_password
