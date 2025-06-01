@@ -1,18 +1,9 @@
-FROM n8nio/n8n:latest
+FROM n8nio/n8n:1.47.2
 
-ENV N8N_BASIC_AUTH_ACTIVE=true
-ENV N8N_BASIC_AUTH_USER=admin
-ENV N8N_BASIC_AUTH_PASSWORD=1234
-ENV N8N_USER_MANAGEMENT_DISABLED=true
-ENV N8N_HOST=0.0.0.0
-ENV N8N_PORT=5678
-ENV PORT=5678
+# (Optional) เปลี่ยน timezone ถ้าต้องการ
+ENV GENERIC_TIMEZONE=Asia/Bangkok
 
-EXPOSE 5678
-
-# ใช้ ENTRYPOINT แยกคำสั่งออก เพื่อให้ทำงานบน Render ได้
-ENTRYPOINT ["tini", "--"]
-CMD ["n8n"]
-
-
-
+# (Optional) เพิ่มภาษาไทยให้รองรับ UTF-8 ครบ
+ENV LANG=th_TH.UTF-8
+ENV LANGUAGE=th_TH.UTF-8
+ENV LC_ALL=th_TH.UTF-8
