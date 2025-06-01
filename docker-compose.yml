@@ -15,8 +15,12 @@ services:
       - DB_POSTGRESDB_PASSWORD=n8npass
       - TZ=Asia/Bangkok
       - GENERIC_TIMEZONE=Asia/Bangkok
+      - WEBHOOK_URL=https://your-n8n-service.onrender.com
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=your_secure_password
     volumes:
-      - ~/.n8n:/home/node/.n8n
+      - n8n_data:/home/node/.n8n
     depends_on:
       - postgres
 
@@ -32,3 +36,4 @@ services:
 
 volumes:
   pgdata:
+  n8n_data:
