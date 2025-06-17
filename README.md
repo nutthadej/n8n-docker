@@ -1,2 +1,2 @@
 # n8n-docker
-n8n:1.95.2-docker-postgres
+n8n:1.98.1-docker-postgres
