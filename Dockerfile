@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.101.1
+FROM n8nio/n8n:lastest
 
 # (Optional) เปลี่ยน timezone ถ้าต้องการ
 ENV GENERIC_TIMEZONE=Asia/Bangkok
