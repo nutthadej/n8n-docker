@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   n8n:
-    image: n8nio/n8n:1.102.4
+    image: n8nio/n8n:1.109.1
     restart: always
     ports:
       - "5678:5678"
@@ -37,3 +37,4 @@ services:
 volumes:
   pgdata:
   n8n_data:
+
